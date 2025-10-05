@@ -1,0 +1,343 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #222936;
+} 
+
+body, html {
+    scrollbar-width: none; 
+    -ms-overflow-style: none;  
+}
+
+.bar{
+    display:flex;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10);
+    gap: 10px;
+    padding: 10px;
+    position: fixed;
+    top: 0px;
+    z-index: 4;
+    width: 100vw;
+    z-index: 2;
+
+
+}
+
+.pages{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 100px;
+    text-align: center;
+    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    color: aliceblue;
+}
+
+.pages:hover{
+    box-shadow: inset 0 0 5px rgba(124, 25, 246, 0.675);
+    transform: 0.25s;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+.content {
+    position: relative;
+    z-index: 1; 
+    color: white;
+    text-align: center;
+    padding-top: 20%;
+}
+
+.para {
+    padding-top: 30px;
+    position: absolute;
+    text-align:center;
+    top: 22%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 250px;
+}
+.para h4{
+    font-size: 25px;
+    color: rgb(251, 53, 43);;
+    text-shadow: 0 0 7px rgba(211, 28, 28, 0.606);
+}
+
+.para p{
+    font-size: 15px;
+
+}
+
+.vertical {
+  display: inline-block;
+  transform: rotate(90deg);
+  transform-origin: left top;
+  white-space: nowrap;
+  position: relative;
+  left: 129%;
+  bottom: 30px;
+  font-size: 30px;
+  color: rgba(251, 53, 43, 0.908);;
+text-shadow: 0 0 12px rgba(211, 28, 28, 0.606);
+  
+}
+
+.Ash{
+    
+    position: absolute;
+    text-align:left;
+    bottom: 15%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+   
+}
+
+.Ash p{
+    font-size: 35px;
+    color: rgba(251, 53, 43, 0.908);
+    text-shadow: 0 0 5px;
+}
+.Ash h1{
+    font-size: 65px;
+    color: rgba(255, 255, 255, 0.908);;
+    text-shadow: 0 0 12px;
+  
+}
+.Ash span h1{
+    font-size: 65px;
+    color: rgba(255, 255, 255, 0.908);;
+    text-shadow: 0 0 10px;
+  
+}
+
+.Ash div p,.Ash div h1{
+    display: inline-block;
+    border: 0px solid;
+    margin: 2px;
+    
+}
+
+.Ash div h1{
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+.Ash .container{
+    position: relative;
+    bottom: 15px;
+}
+
+.container {
+  width: auto;
+  overflow: hidden;  
+  position: relative;
+}
+
+.scroll-container {
+  height: 84px;
+  overflow: hidden;
+  position: relative;
+  width: 500px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 18px;
+}
+
+.scroll-inner {
+  transition: transform 1.5s cubic-bezier(0.77,0,0.18,1);
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ing {
+  height: 73px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  opacity: 0.5;
+  transition: opacity 0.7s;
+  filter: blur(1px);
+  letter-spacing: 2px;
+  text-shadow: 0 4px 24px #ff2d55, 0 1.5px 0 #fff;
+}
+.ing.active {
+  opacity: 1;
+  filter: blur(0);
+  color: #ff2d55;
+  text-shadow: 0 4px 24px #fff, 0 1.5px 0 #ff2d55;
+  transition: opacity 0.7s, filter 0.7s, color 0.7s;
+}
+.spac {
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 0 0 8px #ff2d55, 0 0 2px #fff;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.banner .rotate {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: rotate 50s linear infinite;
+}
+
+.banner .rotate .item {
+    position: absolute;
+    inset: 0;
+    transform: 
+        rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
+        translateZ(500px);
+}
+
+.banner .rotate .item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+@keyframes rotate {
+    from { transform: perspective(1000px) rotateY(0deg); }
+    to   { transform: perspective(1000px) rotateY(360deg); }
+}
+
+/* Parallax yaha se hai
+ */
+.parallax {
+  position: relative;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px 60px;
+  border-radius: 12px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.parallax h1 {
+  font-size: 3rem;
+  color: #ff4c29;
+  letter-spacing: 1px;
+}
+
+/* Different Backgrounds */
+.bg1 {
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
+}
+
+.bg2 {
+  background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80');
+}
+
+.bg3 {
+  background-image: url('images/Purple\ Pink\ Gradient\ Modern\ Metaverse\ Presentation.png');
+}
+
+/* Content Sections */
+.content {
+  padding: 80px 15%;
+  text-align: center;
+  background: #121212;
+  color: #dcdcdc;
+}
+
+.content.dark {
+  background: #1a1a1a50;
+  backdrop-filter: blur(10px);
+}
+
+.content h2 {
+  font-size: 2rem;
+  color: #ff4c29;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .parallax h1 {
+    font-size: 2rem;
+  }
+  .content {
+    padding: 60px 8%;
+  }
+}
+
